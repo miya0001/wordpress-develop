@@ -11,4 +11,4 @@ matrix:
 before_script:
 - bash bin/prepare.sh
 script:
-- docker exec -u 2000 phpenv bash /shared/bin/test.sh
+- docker exec -u ubuntu phpenv bash /shared/bin/test.sh
