@@ -6,7 +6,7 @@ export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
 cd /shared
-sudo chown -R ubuntu:ubuntu .
+# sudo chown -R ubuntu:ubuntu .
 
 cat wp-tests-config-sample.php \
 | sed -e s/youremptytestdbnamehere/wordpress_tests/ \
