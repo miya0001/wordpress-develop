@@ -6,6 +6,8 @@ export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
 cd /shared
+ls -alF
+
 
 cat wp-tests-config-sample.php \
 | sed -e s/youremptytestdbnamehere/wordpress_tests/ \
