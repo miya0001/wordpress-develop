@@ -47,6 +47,7 @@ before_install:
     echo "extension = memcached.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   fi
 before_script:
+- bash bin/prepare.sh
 - |
   # Remove Xdebug for a huge performance increase:
   if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
@@ -101,7 +102,9 @@ before_script:
 - git --version
 - svn --version
 - locale -a
-script: grunt $WP_TRAVISCI
+script:
+- grunt $WP_TRAVISCI
+- bash bin/test.sh
 notifications:
   slack:
     rooms:
