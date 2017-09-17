@@ -17,5 +17,5 @@ cd /shared/tests/phpunit/data/plugins/
 svn co \
     https://plugins.svn.wordpress.org/wordpress-importer/trunk/ \
     wordpress-importer
-
+ls -al
 phpunit
