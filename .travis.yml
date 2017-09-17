@@ -1,4 +1,4 @@
-sudo: false
+services: docker
 matrix:
   include:
   - env: PHP_VERSION=5.2
