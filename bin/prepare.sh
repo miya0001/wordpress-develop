@@ -5,7 +5,7 @@ set -ex
 echo "PHP Version: ${PHP_VERSION}"
 
 docker pull miya0001/phpenv:$PHP_VERSION
-docker run -idt --name phpenv --privileged --volume="$(pwd)":/shared/:rw miya0001/phpenv:$PHP_VERSION "/bin/bash"
+docker run -idt --name phpenv --privileged -w /$(basename $(pwd)) --volume="$(pwd)":/$(basename $(pwd)):rw miya0001/phpenv:$PHP_VERSION "/bin/bash"
 
 # Init MySQL
 docker exec phpenv sudo chown -R mysql:mysql /var/lib/mysql
